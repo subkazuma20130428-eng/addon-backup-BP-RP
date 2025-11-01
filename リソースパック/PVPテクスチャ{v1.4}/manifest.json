@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "PVP専用のテクスチャ[v1.4]",
+    "description": "PVP専用のテクスチャ[サバイバルでも普通に使えます,HIVEにオススメ][by masuMC][自作発言.二次配布禁止:改造OK][V1.4]",
+    "uuid": "17964e00-8b9f-4ec3-95e2-c4d191b1b8f9",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 16, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "154f388f-7eed-4bd8-9f2a-968d3df8540d",
+      "version": [1, 0, 0]
+    }
+  ]
+}

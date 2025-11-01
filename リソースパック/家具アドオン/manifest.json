@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "家具",
+    "description": "家具",
+    "uuid": "5ae94377-5fc1-4660-9c8b-fba7be268133",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "1e0591e1-df8e-43fa-a2c0-bb51f377425d",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "2dea8bfa-7b14-494d-84d4-c9fa61df29a9",
+      "version": [1, 0, 0]
+    }
+  ]
+}

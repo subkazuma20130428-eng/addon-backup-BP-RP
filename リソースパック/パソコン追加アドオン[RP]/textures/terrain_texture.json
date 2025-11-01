@@ -1,0 +1,13 @@
+{
+    "num_mip_levels" : 4,
+    "padding" : 8,
+    "resource_pack_name" : "resource_pack_name",
+    "texture_data" : {
+       "pc" : {
+          "textures" : "textures/blocks/pc"
+       },
+         "mausu" : {
+          "textures" : "textures/blocks/mausu"
+    }
+    }
+}

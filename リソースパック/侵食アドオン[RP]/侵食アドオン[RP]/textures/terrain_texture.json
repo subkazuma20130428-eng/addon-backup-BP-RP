@@ -1,0 +1,23 @@
+{
+   "texture_name": "atlas.terrain",
+   "resource_pack_name": "侵食",
+   "padding": 8,
+   "num_mip_levels": 4,
+   "texture_data": {
+      "lava_block": {
+         "textures": "textures/blocks/lava_block"
+      },
+      "fushoku": {
+         "textures": "textures/blocks/fushoku"
+      },
+     "suraimu": {
+         "textures": "textures/blocks/suraimu"
+      },
+       "mizu": {
+         "textures": "textures/blocks/mizu"
+       },
+       "tnt": {
+         "textures": "textures/blocks/tnt"
+       }
+      }
+   }

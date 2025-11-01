@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "PVP専用のテクスチャ",
+    "description": "PVP専用のテクスチャ[サバイバルでも普通に使えます,HIVEにオススメ]",
+    "uuid": "fe8551f3-1916-4a43-9a61-581c1a1f721f",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 16, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "010a77fd-aa9b-409b-ad0f-bfa1e16cefae",
+      "version": [1, 0, 0]
+    }
+  ]
+}

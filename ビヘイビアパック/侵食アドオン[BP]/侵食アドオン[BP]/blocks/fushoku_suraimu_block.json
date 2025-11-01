@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "custom:fushoku_suraimu_block",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "suraimu",
+                    "render_method": "opaque"
+                }
+            }
+        }
+    }
+}

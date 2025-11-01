@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "custom:fushoku",
+              "name": "minecraft:侵食ブロック"
+            },
+            "items": [
+              "custom:fushoku",
+              "custom:fushoku_suraimu_block",
+              "custom:lava_block",
+              "custom:mizu_tunami",
+              "custom:tnt"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

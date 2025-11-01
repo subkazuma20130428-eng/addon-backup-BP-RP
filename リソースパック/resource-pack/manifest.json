@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "みんなで楽しくアドオン作り",
+    "description": "みんなでつくりました～",
+    "uuid": "db7e9e29-f5f9-4529-8594-3b240f8bc90e",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "28a7700b-f858-464b-885b-c2d411194006",
+      "version": [1, 0, 0]
+    }
+  ]
+}

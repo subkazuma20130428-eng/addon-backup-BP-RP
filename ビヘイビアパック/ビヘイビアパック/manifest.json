@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "何か作ろうぜ!",
+    "description": "みんなでつくりました～",
+    "uuid": "65e5914c-d5e1-4e43-a958-e58d6b59c42d",
+    "version": [0, 0, 1],
+    "min_engine_version": [1, 21, 100]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "f51cb53d-6d8a-463d-8a39-b290f2d88d86",
+      "entry": "scripts/main.js",
+      "version": [1, 0, 0]
+    }
+  ],
+  "capabilities": ["script_eval"],
+  "dependencies": [
+    {"module_name": "@minecraft/server", "version": "2.0.0"},
+    {"module_name": "@minecraft/server-ui", "version": "2.0.0"}
+  ]
+}

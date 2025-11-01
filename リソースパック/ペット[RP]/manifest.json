@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "ペット追加アドオン",
+    "description": "ペットを追加するアドオンです。",
+    "uuid": "b36f29fa-548e-41c1-bdea-761191064ad0",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "6b49cc9e-2f1d-4e05-adfa-fa4e9df5d218",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "2b061c55-fbdc-42fc-86ac-cfe12c9dcc4e",
+      "version": [1, 0, 0]
+    }
+  ]
+}

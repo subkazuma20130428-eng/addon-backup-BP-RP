@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "seisei:diamonddiamond_sword"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      " AA",
+      "   "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:diamond_sword",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "c:diamonddiamond_sword",
+      "count": 1
+    }
+  }
+}

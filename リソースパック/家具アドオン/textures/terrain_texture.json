@@ -1,0 +1,22 @@
+{
+    "num_mip_levels" : 4,
+    "padding" : 8,
+    "resource_pack_name" : "resource_pack_name",
+    "texture_data" : {
+       "isu" : {
+          "textures" : "textures/blocks/isu"
+    },
+           "swich2" : {
+          "textures" : "textures/blocks/swich2"
+    },
+           "tv" : {
+          "textures" : "textures/blocks/tv"
+    } ,
+           "dirt1" : {
+          "textures" : "textures/blocks/dirt1"
+    },
+           "stone1" : {
+          "textures" : "textures/blocks/stone1"
+    }
+}
+}

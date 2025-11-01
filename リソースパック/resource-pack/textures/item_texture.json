@@ -1,0 +1,14 @@
+{
+  "resource_pack_name": "アドオンのテクスチャ",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "虹のダイヤモンド": {
+      "textures": "textures/items/虹のダイヤモンド"
+    },
+      "texture_data": {
+    "虹のダイヤモンド鉱石": {
+      "textures": "textures/blocks/虹のダイヤモンド鉱石"
+    }
+}
+}
+}

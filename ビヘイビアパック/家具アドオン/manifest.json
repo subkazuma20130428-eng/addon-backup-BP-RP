@@ -1,0 +1,37 @@
+{
+    "format_version": 2,
+    "header": {
+      "name": "家具",
+      "description": "家具",
+      "version": [1, 0, 0],
+      "uuid": "2dea8bfa-7b14-494d-84d4-c9fa61df29a9",
+      "min_engine_version": [1, 21, 80]
+    },
+    "modules": [
+      {
+        "type": "script",
+        "description": "",
+        "version": [1, 0, 0],
+        "uuid": "c93bc2a6-2e11-450e-874a-3cbcd089404e",
+        "language": "javascript",
+        "entry": "scripts/main.js"
+      }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.0.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "uuid": "5ae94377-5fc1-4660-9c8b-fba7be268133",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+      "product_type": "addon"
+    }
+}

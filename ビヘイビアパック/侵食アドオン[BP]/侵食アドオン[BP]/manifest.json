@@ -1,0 +1,32 @@
+{
+    "format_version": 2,
+    "header": {
+      "name": "侵食addon[BP]V1.1",
+      "description": "侵食します",
+      "version": [1, 0, 0],
+      "uuid": "d8f5d073-6f03-4b7b-afe2-e6b4f174fd1e",
+      "min_engine_version": [1, 21, 80]
+    },
+    "modules": [
+      {
+        "type": "script",
+        "description": "",
+        "version": [1, 0, 0],
+        "uuid": "287158bb-81d1-411b-8ce9-4e2f677125e4",
+        "language": "javascript",
+        "entry": "scripts/main.js"
+      }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.19.0"
+        },{
+      "uuid": "e0c4047b-13e2-4d84-8f2e-6c4f0d11562e",
+      "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+    "product_type":"addon"
+    }
+  }

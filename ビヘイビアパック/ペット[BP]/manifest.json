@@ -1,0 +1,37 @@
+{
+    "format_version": 2,
+    "header": {
+      "name": "ペット追加アドオン",
+      "description": "ペットを追加するアドオンです。",
+      "version": [1, 0, 0],
+      "uuid": "ef337d6f-2cf0-4fb6-8214-3fd4b610af6e",
+      "min_engine_version": [1, 21, 80]
+    },
+    "modules": [
+      {
+        "type": "script",
+        "description": "",
+        "version": [1, 0, 0],
+        "uuid": "2b061c55-fbdc-42fc-86ac-cfe12c9dcc4e",
+        "language": "javascript",
+        "entry": "scripts/main.js"
+      }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.0.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "uuid": "b36f29fa-548e-41c1-bdea-761191064ad0",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+      "product_type": "addon"
+    }
+}

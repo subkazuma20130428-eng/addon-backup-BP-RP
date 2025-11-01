@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "侵食addon[RP]V1.1",
+    "description": "侵食ブロックを追加します",
+    "uuid": "e0c4047b-13e2-4d84-8f2e-6c4f0d11562e",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "46fa9f90-25ff-4a9a-b871-7771b0cbe6f4",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "d8f5d073-6f03-4b7b-afe2-e6b4f174fd1e",
+      "version": [1, 0, 0]
+    }
+  ]
+}

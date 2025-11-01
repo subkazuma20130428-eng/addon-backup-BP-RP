@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "ミュートコマンドアドオン",
+    "description": "カスタムコマンドを追加できます。",
+    "uuid": "6460f038-e72e-4724-95a9-cfcda65f1acb",
+    "version": [0, 0, 1],
+    "min_engine_version": [1, 21, 100]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "7acae203-cec1-41de-ba1a-8a098155eb94",
+      "entry": "scripts/main.js",
+      "version": [1, 0, 0]
+    }
+  ],
+  "capabilities": ["script_eval"],
+  "dependencies": [
+    {"module_name": "@minecraft/server", "version": "2.2.0-beta"},
+    {"module_name": "@minecraft/server-ui", "version": "2.1.0-beta"}
+  ]
+}
