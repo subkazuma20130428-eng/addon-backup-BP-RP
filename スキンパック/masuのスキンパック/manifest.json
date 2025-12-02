@@ -1,0 +1,16 @@
+{
+  "header": {
+    "name": "masuのスキンパック",
+    "description": "masuの自作スキンです",
+    "uuid": "3dcf0245-dcb9-4572-963e-e7452279f803",
+    "version": [1, 0, 0]
+  },
+  "modules": [
+    {
+      "type": "skin_pack",
+      "uuid": "e13290fe-edf7-4b87-a3c7-c29e72d8330a",
+      "version": [1, 0, 0]
+    }
+  ],
+  "format_version": 1
+}

@@ -1,0 +1,48 @@
+{
+  "serialize_name": "masuスキンパック",
+  "localization_name": "masu スキンパック",
+  "skins": [
+    {
+      "localization_name": "masu0217 Pro",
+      "geometry": "geometry.humanoid.custom",
+      "texture": "skin1.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "イカゲームスキン",
+      "geometry": "geometry.humanoid.custom",
+      "texture": "skin2.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "null",
+      "geometry": "geometry.humanoid.custom",
+      "texture": "null.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "entity303",
+      "geometry": "geometry.humanoid.custom",
+      "texture": "entity303.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "透明",
+      "geometry": "geometry.humanoid.custom",
+      "texture": "透明.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "死神くん2",
+      "geometry": "geometry.humanoid.custom",
+      "texture": "skin3.png",
+      "type": "free"
+    },
+    {
+      "localization_name": "実況者",
+      "geometry": "geometry.humanoid.custom",
+      "texture": "skin4.png",
+      "type": "free"
+    }
+  ]
+}
