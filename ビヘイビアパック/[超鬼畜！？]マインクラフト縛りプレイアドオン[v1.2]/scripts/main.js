@@ -20,22 +20,37 @@ system.runInterval(() => {
 
   for (const player of world.getPlayers()) {
 
-    // ===== ホットバー縛り =====
-    const inv = player.getComponent("minecraft:inventory")?.container;
-    if (inv) {
-      for (let slot = 9; slot < inv.size; slot++) {
-        const item = inv.getItem(slot);
-        if (!item) continue;
+// ===== ホットバー縛り（空きがあれば入れる）=====
+const inv = player.getComponent("minecraft:inventory")?.container;
+if (inv) {
+  for (let slot = 9; slot < inv.size; slot++) {
+    const item = inv.getItem(slot);
+    if (!item) continue;
 
-        const dir = player.getViewDirection();
-        player.dimension.spawnItem(item, {
-          x: player.location.x + dir.x * 3,
-          y: player.location.y + 1,
-          z: player.location.z + dir.z * 3
-        });
+    let moved = false;
+
+    // ホットバーの空きを探す
+    for (let hotbar = 0; hotbar <= 8; hotbar++) {
+      if (!inv.getItem(hotbar)) {
+        inv.setItem(hotbar, item);
         inv.setItem(slot, null);
+        moved = true;
+        break;
       }
     }
+
+    // ホットバーが満杯ならドロップ
+    if (!moved) {
+      const dir = player.getViewDirection();
+      player.dimension.spawnItem(item, {
+        x: player.location.x + dir.x * 3,
+        y: player.location.y + 1,
+        z: player.location.z + dir.z * 3
+      });
+      inv.setItem(slot, null);
+    }
+  }
+}
 
     // ===== ジャンプダメージ =====
     const health = player.getComponent("minecraft:health");
