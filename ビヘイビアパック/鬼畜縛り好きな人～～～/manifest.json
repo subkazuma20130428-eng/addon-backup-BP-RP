@@ -1,0 +1,37 @@
+{
+    "format_version": 2,
+    "header": {
+      "name": "超鬼畜！？マインクラフト縛りプレイアドオン[v1.0]",
+      "description": "俺でも無理",
+      "version": [1, 0, 0],
+      "uuid": "fbe618c4-350c-44e7-aa50-32f9f99cf8c5",
+      "min_engine_version": [1, 21, 80]
+    },
+    "modules": [
+      {
+        "type": "script",
+        "description": "",
+        "version": [1, 0, 0],
+        "uuid": "319f8abf-950d-43f0-a232-bfcd9b7a80f6",
+        "language": "javascript",
+        "entry": "scripts/main.js"
+      }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.0.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "uuid": "5ae94377-5fc0-4660-9c8b-fba7be268133",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+      "product_type": "addon"
+    }
+}

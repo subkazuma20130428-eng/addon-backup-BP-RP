@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "custom:water_bottle"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "BWB",
+      " B ",
+      "   "
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:glass"
+      },
+      "W": {
+        "item": "minecraft:water_bucket"
+      }
+    },
+    "result": {
+      "item": "minecraft:glass_bottle",
+      "data": 0,
+      "count": 1
+    }
+  }
+}

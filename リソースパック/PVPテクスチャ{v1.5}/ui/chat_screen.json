@@ -1,0 +1,85 @@
+{
+  "namespace": "chat",
+
+  "chat_message_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "chat_message_copy": {
+          "type": "edit_box",
+          "size": [ "100%", "100%c" ],
+          "max_length": 32767,
+          "focus_enabled": true,
+          "enabled_newline": true,
+          "can_be_deselected": true,
+          "always_listening": false,
+          "text_type": "EntendedASCII",
+          "text_box_name": "chat_copy_npx",
+          "text_control": "text_panel",
+          "visible": true,
+
+          "selection_color": [1, 1, 1, 1],
+          "selection_background_color": [0.25, 0.55, 1.0, 0.6],
+
+          "controls": [
+            {
+              "text_panel": {
+                "type": "label",
+                "size": [ "100%", "default" ],
+                "layer": 5,
+                "text": "#item_name",
+                "localize": false,
+                "enable_profanity_filter": false,
+                "color": "$chat_text_color",
+                "font_type": "$chat_font_type",
+                "font_scale_factor": "$chat_font_scale_factor",
+                "line_padding": "$chat_line_spacing",
+                "$text_box_name": "chat_copy_npx",
+                "property_bag": {
+                  "#property_field": "#item_name"
+                },
+                "$newline_refresh": "#newline_refresh",
+                "bindings": [
+                  { "binding_name": "#text" },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "#text",
+                    "target_property_name": "#item_name"
+                  },
+                  { "binding_name": "#newline_refresh" }
+                ]
+              }
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.text_edit_box_selected",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.text_edit_box_deselected",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "messages_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "$scrolling_content_anchor_from": "bottom_left",
+    "$scrolling_content_anchor_to": "bottom_left",
+    "factory": {
+      "name": "messages_factory",
+      "max_children_size": 100,
+      "control_ids": {
+        "chat_screen_messages": "chat_screen_messages@chat.chat_message_content"
+      }
+    }
+  }
+}
