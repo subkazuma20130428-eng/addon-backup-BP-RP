@@ -1,19 +1,22 @@
 import { world, system, EquipmentSlot } from "@minecraft/server";
 
 // ===============================
-// 共通変数
+// 変数
 // ===============================
 const wasOnGround = new Map();
 const doubled = new Set();
 const waterTime = new Map();
-const waterWarn = new Map(); // ★警告表示用
+const waterWarn = new Map();
+
 let zombieTimer = 0;
+let tntTimer = 0;
 
 // ===============================
-// メインループ（毎tick）
+// メインループ（1tick）
 // ===============================
 system.runInterval(() => {
   zombieTimer++;
+  tntTimer++;
 
   for (const player of world.getPlayers()) {
 
@@ -52,7 +55,7 @@ system.runInterval(() => {
       equip.getEquipment(EquipmentSlot.Legs) ||
       equip.getEquipment(EquipmentSlot.Feet);
 
-    // ===== fireタグ持ちは燃える =====
+    // ===== fireタグ =====
     if (player.hasTag("fire") && !hasArmor) {
       player.setOnFire(1);
     }
@@ -69,19 +72,17 @@ system.runInterval(() => {
     }
 
     // ===============================
-    // 水システム（1分 = 1200tick）
+    // 水システム（70秒 = 1400tick）
     // ===============================
     const t = (waterTime.get(player.id) ?? 0) + 1;
     waterTime.set(player.id, t);
 
-    // 鈍足付与
-    if (t >= 1200 && !player.hasTag("water_ok")) {
+    if (t >= 1400) {
       player.addEffect("slowness", 40, {
         amplifier: 1,
         showParticles: false
       });
 
-      // ★警告表示（5秒おき）
       const w = (waterWarn.get(player.id) ?? 0) + 1;
       waterWarn.set(player.id, w);
 
@@ -92,9 +93,16 @@ system.runInterval(() => {
     } else {
       waterWarn.set(player.id, 0);
     }
+
+    // ===== TNT（10秒ごと）=====
+    if (tntTimer >= 200) {
+      const { x, y, z } = player.location;
+      player.dimension.runCommand(`summon tnt ${x} ${y + 10} ${z}`);
+    }
   }
 
   if (zombieTimer >= 600) zombieTimer = 0;
+  if (tntTimer >= 200) tntTimer = 0;
 
   // ===== MOB HP2倍 =====
   for (const entity of world.getAllEntities()) {
@@ -112,44 +120,18 @@ system.runInterval(() => {
 }, 1);
 
 // ===============================
-// 水入り瓶を「飲んだら」回復
+// 水入り瓶を「飲み終わったら」
 // ===============================
-world.afterEvents.itemUse.subscribe(ev => {
+world.afterEvents.itemCompleteUse.subscribe(ev => {
   const player = ev.source;
   const item = ev.itemStack;
 
   if (!player || player.typeId !== "minecraft:player") return;
   if (item.typeId !== "minecraft:potion") return;
 
-  // 鈍足解除 & タイマーリセット
   player.removeEffect("slowness");
-  player.addTag("water_ok");
   waterTime.set(player.id, 0);
   waterWarn.set(player.id, 0);
 
   player.sendMessage("§b水を飲んだ！");
 });
-
-// ===============================
-// 10秒ごとにTNTを降らせる
-// ===============================
-let tntTimer = 0;
-
-system.runInterval(() => {
-  tntTimer++;
-
-  // 10秒 = 200tick
-  if (tntTimer < 200) return;
-
-  for (const player of world.getPlayers()) {
-    const { x, y, z } = player.location;
-
-    // プレイヤーの頭上にTNT
-    player.dimension.runCommand(
-      `summon tnt ${x} ${y + 10} ${z}`
-    );
-  }
-
-  tntTimer = 0;
-}, 1);
-
